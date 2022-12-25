@@ -1,15 +1,15 @@
 .Navbar {
     display: flex;
-    flex-direction: row;
+    flex-direction: row !important;
     align-items: center;
     justify-content: start;
     gap: 1rem;
     margin-bottom: 1rem;
 }
-/* 
-@media only screen and (max-width: 600px) {
-    .Navbar {
-        flex-direction: column;
-    }   
-} */
 
+/* @media only screen and (max-width: 600px) {
+    .Navbar {
+        flex-direction: row;
+    }   
+}
+ */

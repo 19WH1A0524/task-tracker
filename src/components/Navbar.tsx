@@ -9,7 +9,7 @@ function Navbar() {
         <Button colorScheme='cyan' variant='ghost'>
             Home
         </Button>
-        <Button variant='ghost'>About</Button>
+        <Button  variant='ghost'>About</Button>
     </Card>
   )
 }

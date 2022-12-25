@@ -1,16 +1,18 @@
-import { Card, CardBody, Text, Container } from '@chakra-ui/react'
+import { Text, Container} from '@chakra-ui/react'
 import './App.css'
+import AddTaskButton from './components/AddTaskButton'
+import TaskTabs from './components/TaskTabs'
+import AddTaskForm from './components/AddTaskForm'
+import { useState } from 'react'
 
 function App() {
-
+  const [opened, setOpened] = useState<boolean>(false)
   return (
-    
     <Container maxW={'5xl'}>
-      <Card>
-        <CardBody>
-          <Text>View a summary of all your customers over the last month.</Text>
-        </CardBody>
-      </Card>
+      <Text fontSize='3xl' fontWeight={'bold'} align={'center'}>App Title</Text>
+      <AddTaskButton setOpened={setOpened}/>
+      <TaskTabs />
+      <AddTaskForm opened = {opened}/>
     </Container>
   )
 }
