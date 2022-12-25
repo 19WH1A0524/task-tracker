@@ -12,3 +12,12 @@
         flex-direction: column !important;
     }   
 }
+
+.drawerHeader {
+  display: flex;
+  flex-direction: row !important;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}

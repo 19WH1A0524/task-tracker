@@ -1,13 +1,20 @@
 import React from 'react'
 import { Text, Container, Drawer, DrawerOverlay, DrawerContent, DrawerBody, DrawerHeader, Input, FormLabel, FormControl, Textarea, Button, Stack } from '@chakra-ui/react'
+import { CloseIcon } from '@chakra-ui/icons'
 
-function AddTaskForm({opened}:{opened:boolean} ) {
-
+function AddTaskForm({opened, setOpened}:{opened:boolean, setOpened: React.Dispatch<React.SetStateAction<boolean>>} ) {
+  const onClickHandler =() =>{
+    setOpened(false)
+ }
   return (
     <Drawer size={'xl'} placement={"bottom"} onClose={() => {  }} isOpen={opened}>
         <DrawerOverlay />
         <DrawerContent>
-          <DrawerHeader borderBottomWidth='1px'>Add Task</DrawerHeader>
+          
+          <DrawerHeader className='drawerHeader' borderBottomWidth='1px'>Add Task
+          <Button color={'red'} variant={'ghost'} onClick = {onClickHandler} ><CloseIcon/></Button>
+          </DrawerHeader>
+
           <DrawerBody>
             <FormControl marginBottom={'1rem'}>
               <FormLabel>Title</FormLabel>

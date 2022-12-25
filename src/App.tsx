@@ -12,7 +12,7 @@ function App() {
       <Text fontSize='3xl' fontWeight={'bold'} align={'center'}>App Title</Text>
       <AddTaskButton setOpened={setOpened}/>
       <TaskTabs />
-      <AddTaskForm opened = {opened}/>
+      <AddTaskForm opened = {opened} setOpened={setOpened}/>
     </Container>
   )
 }
