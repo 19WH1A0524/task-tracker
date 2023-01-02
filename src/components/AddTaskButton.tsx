@@ -6,6 +6,7 @@ function AddTaskButton({setOpened}:{setOpened: React.Dispatch<React.SetStateActi
   ) {
     const onClickHandler =() =>{
        setOpened(true)
+       
     }
   return (
       <Stack align={'center'} marginBottom={'2rem'} marginTop={'5rem'}>
